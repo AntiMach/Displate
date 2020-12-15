@@ -2,7 +2,7 @@
   "compilerOptions": {
       "module": "commonjs",
       "target": "ESNext",
-      "types": ["node"],
+      "types": [],
       "resolveJsonModule": true,
       "outDir": "./build"
   },

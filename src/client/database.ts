@@ -52,17 +52,19 @@ export class Table<E> {
         this.cache = new Map();
     }
 
+    private async update(eid: string) {
+        this.cache.set(eid, await this.database.get(this.name, eid));
+    }
     public async set(eid: string, column: string, value: string) {
         try {
             await this.database.set(this.name, eid, column, value);
-            this.cache.get(eid)[column] = value;
+            await this.update(eid);
         } catch (e) {
             console.error(e);
         }
     }
     public async get(eid: string) {
-        if (!this.cache.has(eid))
-            this.cache.set(eid, await this.database.get(this.name, eid));
+        if (!this.cache.has(eid)) await this.update(eid);
 
         return this.cache.get(eid);
     }

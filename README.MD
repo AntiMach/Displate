@@ -25,8 +25,9 @@ Then, if you still need to setup a MySQL server, then do the following:
 sudo apt-get install mysql-server
 mysql_secure_installation
 sudo mysql
-# CREATE USER 'USER'@'HOST_IP' IDENTIFIED BY 'PASSWORD';
-# GRANT ALL PRIVELEGES ON *.* TO 'USER'@'HOST_IP';      
+# CREATE USER 'USER'@'%' IDENTIFIED WITH mysql_native_password BY 'PASSWORD';
+# GRANT ALL PRIVILEGES ON *.* TO 'USER'@'%' WITH GRANT OPTION;
+# FLUSH PRIVILEGES;
 # EXIT;                                                 
 bash  nano /etc/mysql/mysql.conf.d/mysqld.cnf
 # change 'bind-address' ip to *
