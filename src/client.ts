@@ -1,9 +1,9 @@
 import { Client, Guild, Message } from "discord.js";
-import * as path from "path";
-import * as fs from "fs";
 import { Command, Group } from "./imports";
 import { PoolConfig } from "mysql";
 import { Database, Table } from "./database";
+import * as path from "path";
+import * as fs from "fs";
 
 export class BotClient extends Client {
     public readonly commands: Map<string, Command>;
