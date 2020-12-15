@@ -1,6 +1,6 @@
 {
   "name": "displate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A discord bot client template with builtin mysql database control",
   "main": "./build/index.js",
   "scripts": {
