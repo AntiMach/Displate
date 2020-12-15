@@ -1,5 +1,5 @@
-import { BotClient } from "../src/client";
-import * as ENV from "./env.json";
+var { BotClient } = require('displate');
+var ENV = require('./env.json');
 
 const client = new BotClient(ENV.database);
 
