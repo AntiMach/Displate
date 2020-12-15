@@ -2,7 +2,8 @@
   "name": "displate",
   "version": "1.0.2",
   "description": "A discord bot client template with builtin mysql database control",
-  "main": "./build/index.d.js",
+  "main": "./build/index.js",
+  "types": "./types.d.ts",
   "scripts": {
     "rebuild": "rimraf ./build && mkdirp ./build && tsc"
   },
