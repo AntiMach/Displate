@@ -1,0 +1,24 @@
+{
+  "name": "displate",
+  "version": "1.0.0",
+  "description": "A discord bot client template with builtin mysql database control",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "nodemon ./build/index.js",
+    "rebuild": "rimraf ./build && mkdirp ./build && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mysql": "^2.15.16",
+    "@types/node": "^14.14.13",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "mysql": "^2.18.1"
+  }
+}

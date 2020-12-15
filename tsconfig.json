@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "target": "ESNext",
+      "types": ["node"],
+      "resolveJsonModule": true,
+      "outDir": "./build"
+  },
+  "compileOnSave": true,
+  "include": ["./**/*"]
+}
