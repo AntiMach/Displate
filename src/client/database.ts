@@ -17,7 +17,6 @@ export class Database {
             })
         })
     }
-
     private async query(query: string) {
         return new Promise<any>((resolve, reject) => {
             this.pool.query(query, (err, result) => {

@@ -25,6 +25,7 @@ export class BotClient extends Client {
 
         this.on("ready", () => this.onReady());
         this.on("message", (msg) => this.onMessage(msg));
+        this.on("error", console.error);
     }
 
     public async getPrefix(guild: Guild) {

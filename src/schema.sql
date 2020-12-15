@@ -1,12 +1,11 @@
-CREATE DATABASE db_name;
---USE database_name;
+CREATE DATABASE databaseName;
 
 CREATE TABLE guilds (
     ID CHAR(18) NOT NULL PRIMARY KEY,
     prefix VARCHAR(100) DEFAULT '!'
 );
 
-CREATE TABLE table_name (
+CREATE TABLE tableName (
     ID CHAR(18) NOT NULL PRIMARY KEY,
     ...
 );
@@ -25,26 +24,29 @@ CREATE TABLE table_name (
 --TIMESTAMP               --For keeping track of time, use NOW as DEFAULT and ON UPDATE
 
 ----Miscellaneous database editing
+--Access database on mysql
+USE databaseName;
+
 --Add a column to a table
-ALTER TABLE table_name ADD COLUMN column_name column_definition;
+ALTER TABLE tableName ADD COLUMN columnName columnDefinition;
 
 --Remove a column from a table
-ALTER TABLE table_name DROP COLUMN column_name;
+ALTER TABLE tableName DROP COLUMN columnName;
 
 --Rename a column from a table
-ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
+ALTER TABLE tableName RENAME COLUMN oldName TO newName_;
 
 --Completely change a column from a table
-ALTER TABLE table_name CHANGE COLUMN old_name new_name column_definition;
+ALTER TABLE tableName CHANGE COLUMN oldName newName_ columnDefinition;
 
 --Delete a table
-DROP TABLE table_name;
+DROP TABLE tableName;
 
 --Add element to table
-INSERT INTO table_name (column_name, ...) VALUES (value, ...);
+INSERT INTO tableName (columnName, ...) VALUES (val, ...);
 
 --Remove element from table
-DELETE FROM table_name WHERE column_name=value;
+DELETE FROM tableName WHERE columnName=val;
 
 --Update element(s) of a table given a certain condition
-UPDATE table_name SET column_name=value WHERE column_name=value;
+UPDATE tableName SET columnName=val WHERE columnName=val;
